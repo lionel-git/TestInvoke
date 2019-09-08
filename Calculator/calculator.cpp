@@ -3,11 +3,7 @@
 #include <windows.h>
 #include <iostream>
 #include <libloaderapi.h>
-#include <cstring>
 
-//#include "atlbase.h"
-//#include "atlstr.h"
-#include "tchar.h"
 
 calculator::calculator()
 {
@@ -20,7 +16,7 @@ MYPROC current_function;
 
 int load_library()
 {
-	HINSTANCE hGetProcIDDLL = LoadLibrary(_T("SubLibrary.dll"));
+	HINSTANCE hGetProcIDDLL = LoadLibrary(L"SubLibrary.dll");
 
 	if (!hGetProcIDDLL) {
 		std::cout << "could not load the dynamic library" << std::endl;
