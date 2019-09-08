@@ -10,8 +10,15 @@ namespace TestInvoke
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine(do_sum(2.0,3.0));
+            try
+            {
+                Console.WriteLine("Hello World!");
+                Console.WriteLine(do_sum(7.0, 8.0));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
 }

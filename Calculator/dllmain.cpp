@@ -13,7 +13,6 @@ BOOL APIENTRY DllMain( HMODULE hModule,
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
     case DLL_PROCESS_DETACH:
-		DWORD x = ul_reason_for_call;
 		//char* P = 0;
 		//*P = 1;
         break;
