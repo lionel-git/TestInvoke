@@ -9,6 +9,9 @@ namespace TestInvoke
         [DllImport("Calculator.dll")]
         public static extern double do_sum(double a, double b);
 
+        //[DllImport("SubLibrary.dll")]
+        //public static extern double do_sum(double a, double b);
+
         static void Main(string[] args)
         {
             try
@@ -22,7 +25,9 @@ namespace TestInvoke
                     var r = do_sum(i, 8.0);
                     double elpased_us = sw.ElapsedTicks * 0.1;
                     Console.WriteLine($"{elpased_us} us ({r})");
-                }                
+                }
+                Console.WriteLine("Press key");
+                Console.ReadKey();
             }
             catch (Exception e)
             {

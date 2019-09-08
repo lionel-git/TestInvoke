@@ -5,8 +5,12 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy /y $(SolutionDir)x64\$(Configuration)\Calculator.* $(ProjectDir)bin\$(Configuration)\$(TargetFramework)"></Exec>
+    <Exec Command="copy /y $(SolutionDir)x64\$(Configuration)\Calculator.* $(TargetDir)&#xD;&#xA;copy /y $(SolutionDir)x64\$(Configuration)\SubLibrary.* $(TargetDir)"></Exec>
   </Target>
 
 </Project>
