@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace TestInvoke
@@ -13,7 +14,15 @@ namespace TestInvoke
             try
             {
                 Console.WriteLine("Hello World!");
-                Console.WriteLine(do_sum(7.0, 8.0));
+                var sw = new Stopwatch();
+                
+                for (int i = 0; i < 10; i++)
+                {
+                    sw.Restart();
+                    var r = do_sum(i, 8.0);
+                    double elpased_us = sw.ElapsedTicks * 0.1;
+                    Console.WriteLine($"{elpased_us} us ({r})");
+                }                
             }
             catch (Exception e)
             {
