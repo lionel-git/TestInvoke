@@ -40,8 +40,10 @@ int load_library()
 double calculator::do_sum(double a, double b)
 {
 	try {
-	/*	char* P = 0;
-		*P = 'a';*/
+		char* P = 0;
+		*P = 'a';
+		//int b = 0;
+		//return 1 / b;
 
 		load_library();
 		return current_function(a, b);
@@ -53,7 +55,7 @@ double calculator::do_sum(double a, double b)
 	}
 	catch (...)
 	{
-		return -17;
+		return +33;
 	}
 	//return a + b;
 }

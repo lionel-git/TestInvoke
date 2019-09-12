@@ -19,7 +19,7 @@ namespace TestInvoke
         {
             var e = new CountdownEvent(2);
             e.Signal(2);
-            bool ret=e.Wait(2000);
+            bool ret = e.Wait(2000);
             Console.WriteLine(ret);
         }
 
@@ -44,7 +44,7 @@ namespace TestInvoke
 
                 Console.WriteLine("Start");
                 var sw = new Stopwatch();
-                
+
                 for (int i = 0; i < 10; i++)
                 {
                     sw.Restart();
@@ -57,7 +57,7 @@ namespace TestInvoke
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Console.WriteLine($"Ex: {e}");
             }
             finally
             {
