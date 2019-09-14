@@ -16,6 +16,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SubLibrary", "SubLibary\SubLibary.vcxproj", "{6EA7741F-7E54-428F-B2B0-ABCFBEF74B26}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestInvokeFw", "TestInvokeFw\TestInvokeFw.csproj", "{E76403F2-5AE6-48FC-A331-EA336164573C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{94890446-EE56-46D7-9247-440F352609BC} = {94890446-EE56-46D7-9247-440F352609BC}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -55,10 +55,15 @@ namespace TestInvoke
                 Console.WriteLine("Press key");
                 Console.ReadKey();
             }
+            catch (AccessViolationException e)
+            {
+                Console.WriteLine($"Big pb: {e}");
+            }
             catch (Exception e)
             {
                 Console.WriteLine($"Ex: {e}");
             }
+       
             finally
             {
                 Console.WriteLine("End");
